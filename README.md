@@ -10,6 +10,8 @@
 
 sex 22 nov -> Criação de uma janela com o pygame e que leia o teclado, criação do módulo 'settings' onde é definido tamanho e cor da tela, criação do módulo 'ship' que adiciona a imagem da nave e suas ações.
 
-sex 23 nov -> Refatoração do código com a criação do módulo 'game_functions' na qual armazenará várias funções que farão o jogo executar deixando o código main (alien_invasion.py) mais fácil de entender.
+sab 23 nov -> Refatoração do código com a criação do módulo 'game_functions' na qual armazenará várias funções que farão o jogo executar deixando o código main (alien_invasion.py) mais fácil de entender.
+
+dom 24 nov -> Foi adicionado a 'game_functions.py' instruções para responder a eventos de pressionamento de teclas, adicionado flags no módulo 'ship.py' para movimento continua quando a tecla for pressionada e atualizado o laço do código principal 'alien_invasion.py' para rodar a resposta dos eventos.
 
 
