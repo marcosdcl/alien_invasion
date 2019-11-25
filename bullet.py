@@ -22,3 +22,13 @@ class Bullet(Sprite):
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
 
+    def update(self):
+        """Move o projétil para cima na tela."""
+        # Atualiza a posição decimal do projétil
+        self.y -= self.speed_factor
+        # Atualiza a posição de rect
+        self.rect.y = self.y
+
+    def draw_bullet(self):
+        """Desenha o projétil na tela."""
+        pygame.draw.rect(self.screen, self.color, self.rect)
