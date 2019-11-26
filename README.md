@@ -24,10 +24,10 @@
 # O laço principal do jogo:
 
      while True:
-            gf.check_events(ai_settings, screen, ship, bullets)
-            ship.update()
-            gf.update_bullets(bullets)
-            gf.update_screen(ai_settings, screen, ship, bullets)
+         gf.check_events(ai_settings, screen, ship, bullets)
+         ship.update()
+         gf.update_bullets(bullets)
+         gf.update_screen(ai_settings, screen, ship, bullets)
 
 onde:
 
@@ -53,4 +53,6 @@ dom 24 nov -> Foi adicionado a 'game_functions.py' instruções para responder a
 
 seg 25 nov ->  Foi adicionado em settings uma váriavel para controle de velocidade da nave, alteração no modulo 'ship.py' para que rect reconheça o valor como float, adicionado o parâmetro 'ai_settings' para a váriavel ship no código principal para a alteração da velocidade, assim fica mais fácil fazer alteração da velocidade da nave quando for necessário. Foi feita uma modificação no método 'update()' em 'ship.py' para que a espaçonave pare o movimento ao alcançar a borda da tela. Foi feita uma refatoração na função 'check_events()' em 'game_functions.py' que foi dividida em mais duas outras funções, uma para responder quando as teclas forem pressionadas e outra para reconhecer quando as teclas forem soltas, foi refatorado pois a função 'check_events()' ficará muito grande ao decorrer do desenvolvimento. Foi criado um novo módulo, 'bullet.py' contém a classe 'Bullet()' que administrará projéteis disparados pela espaçonave. Criado em 'bullet.py' o método 'update()' que administra a posição do projétil e o método 'draw_bullet()' para desenhar um projétil. Os projéteis foram armazenados em um grupo chamado 'bullets', o grupo foi feito para desenhar os projéteis na tela a cada passada pelo laço principal e atualizar a posição de cada projétil e por último 'check_keydown_events()' em 'game_functions.py' foi modificado para que o projétil seja disparado ao pressionar a tecla espaço.
 
-ter 26 nov -> Foi feito um laço for em 'alien_invasion.py' para apagar projéteis que saiam da tela para liberar espaço na mémoria. Foi feita uma modificação em 'settings.py' e 'game_functions.py' para limitar o número de projéteis disparados em 3.Foi feita mais uma refatoração onde a ação de atualizar os projéteis na tela foram apagadas de 'alien_invasion.py' para que o código while fique mais simples e foram passadas para uma nova função em 'game_functions.py' chamada 'update_bullets()'.
+ter 26 nov -> Foi feito um laço for em 'alien_invasion.py' para apagar projéteis que saiam da tela para liberar espaço na mémoria. Foi feita uma modificação em 'settings.py' e 'game_functions.py' para limitar o número de projéteis disparados em 3.Foi feita mais uma refatoração onde a ação de atualizar os projéteis na tela foram apagadas de 'alien_invasion.py' para que o código while fique mais simples e foram passadas para uma nova função em 'game_functions.py' chamada 'update_bullets()'. Foi criado uma nova função em 'game_functions.py' chamada 'fire_bullet()' responsável por controlar os disparos de projéteis.
+
+
