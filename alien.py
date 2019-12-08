@@ -16,3 +16,7 @@ class Alien(Sprite):
 		# Inicia cada novo alienígena próximo à parte superior esquerdo da tela
 		self.rect.x = self.rect.width
 		self.rect.y = self.rect.heiht
+
+		# Armazena a posição exata do livro
+		self.x = float(self.rect.x)
+
