@@ -40,7 +40,7 @@ onde:
     gf.update_bullets()
  Atualiza a posição dos projéteis disparados.
 
-    gr.update_screen()
+    gf.update_screen()
  Usa as posições atualizadas pelos métodos 'ship_updates()' e 'gf.update_bullets()' para desenhar uma nova tela.
 
 # Atualizações
@@ -55,4 +55,4 @@ seg 25 nov ->  Foi adicionado em settings uma váriavel para controle de velocid
 
 ter 26 nov -> Foi feito um laço for em 'alien_invasion.py' para apagar projéteis que saiam da tela para liberar espaço na mémoria. Foi feita uma modificação em 'settings.py' e 'game_functions.py' para limitar o número de projéteis disparados em 3.Foi feita mais uma refatoração onde a ação de atualizar os projéteis na tela foram apagadas de 'alien_invasion.py' para que o código while fique mais simples e foram passadas para uma nova função em 'game_functions.py' chamada 'update_bullets()'. Foi criado uma nova função em 'game_functions.py' chamada 'fire_bullet()' responsável por controlar os disparos de projéteis.
 
-dom 08 dez -> Foi adicionado mais uma linha elif em 'game_functions.py', 'check_keydown_events()' para que o jogo encerre quando o usuario apertar ums tecla em especifico, nesse caso 'Q'. Foi criado o módulo 'alien.py' que contém a classe que desenha os alienígenas.
+dom 08 dez -> Foi adicionado mais uma linha elif em 'game_functions.py', 'check_keydown_events()' para que o jogo encerre quando o usuario apertar ums tecla em especifico, nesse caso 'Q'. Foi criado o módulo 'alien.py' que contém a classe que desenha os alienígenas. Foi criado uma instância de 'Alien()' para o código principal 'alien_invasion.py' e foi atualizado o 'gf.update_screen()' para carregar a instância alien.
