@@ -17,6 +17,9 @@ class Alien(Sprite):
 		self.rect.x = self.rect.width
 		self.rect.y = self.rect.heiht
 
-		# Armazena a posição exata do livro
+		# Armazena a posição exata do alienígena
 		self.x = float(self.rect.x)
 
+	def blitme(self):
+		"""Desenha o alienígena em sua posição atual."""
+		self.screen.blit(self.image, self.rect)
